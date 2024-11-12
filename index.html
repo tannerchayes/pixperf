@@ -12,13 +12,17 @@
     <div class="flex items-center">
         <img class="md:h-10 md:w-10" src="img/Surf-Logo.png" alt="">
         <p class="text-base leading-8 text-gray-500 text-left">
-            SURF & PADDLE CO. BLOG
+            {{ heading }}
         </p>
     </div>
 
     <div class="text-white flex">
-        <a href="#" class="text-white mr-10">ABOUT</a>
-        <a href="#" class="text-white mr-5">SEARCH</a>
+        {{ nav_links }}
+
+        {% for link in links %}
+            <a href="#" class="text-white mr-5">{{ link }}</a>
+        {% endfor %}
+
         <img class="md:h-10 md:w-10" src="img/Win-Logo.png" alt="windows thing">
     </div>
 </nav>
@@ -124,7 +128,9 @@
         </div>
     </div>
 
-    {{ blog_posts }}
+    <div class="flex align-bottom">
+        {{ blog_posts }}
+    </div>
 
 </div>
 </body>
