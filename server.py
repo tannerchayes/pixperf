@@ -65,14 +65,14 @@ class BlogServer(SimpleHTTPRequestHandler):
                                 """
                     }
 
-                    processed_template = template
+                    processed_template = str(template, 'utf-8')
                     for ctx_variables in context.keys():
                         processed_template = processed_template.replace('{{ ' + ctx_variables + ' }}',
                                                                         context.get(ctx_variables))
 
                     # template = self.render_template(template, self.get_context_data())
                     self.end_headers()
-                    self.wfile.write(processed_template)
+                    self.wfile.write(bytes(processed_template, 'utf-8'))
                 else:
                     self.copyfile(f, self.wfile)
             finally:
