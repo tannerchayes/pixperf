@@ -39,7 +39,7 @@ class BlogServer(SimpleHTTPRequestHandler):
                             </div>
                         </div>
                     """
-                    with open('csv(2)', 'r', encoding='utf-8') as csv_file:
+                    with open('data.csv', 'r', encoding='utf-8') as csv_file:
                         csv_reader = csv.DictReader(csv_file)
 
                         blog_post_html = ""
