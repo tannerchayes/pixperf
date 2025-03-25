@@ -8,7 +8,7 @@ image and turned it into a functioning website.
 
 ## Screenshot of completed project
 
-![Surf and paddle image](img/screenshot.png)
+![Surf and paddle image](img/screen_shot.png)
 
 
 ## Objectives
